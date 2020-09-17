@@ -1,6 +1,23 @@
-# Python
+# Python - A guide
 This is a document to check everything I learn about Python.
 Concepts will be in inverse order of appearance (first concepts I see first go last and vice versa).
+
+## 4) Variables
+
+There is no variable declaration in Python.
+<pre>
+<code>my_name = "Joe Warren"</code>
+<code>print my_name</code>
+</pre>
+<pre>
+<code>my_age = 51</code>
+<code>print my_age</code>
+</pre>
+
+<pre>
+<code>my_age += 1</code>
+<code>print my_age</code>
+</pre>
 
 ## 3) Arithmetic Expressions
 
@@ -24,11 +41,11 @@ square root of two is 1.4142135623730950488016887242096980785696...
 
 #### arithmetic operators
 <pre>
-+		plus		addition
--		minus		subtraction
-*		times		multiplication
-/		divided by 	division
-**    power		exponentiation
++ plus		addition
+-	minus		subtraction
+*	times		multiplication
+/	divided by 	division
+** power		exponentiation
 </pre>
 
 <code>print 1 + 2, 3 - 4, 5 * 6, 2 ** 5</code>
