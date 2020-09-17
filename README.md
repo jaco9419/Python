@@ -5,10 +5,10 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 ## 3) Arithmetic Expressions
 
 ### int() and float()
-
-print type(3), type(3.14159)
-print type(3.0)
-
+<pre>
+<code>print type(3), type(3.14159)</code>
+<code>print type(3.0)</code>
+</pre>
 we can convert between data types using int() and float()
 note that int() takes the "whole" part of a decimal number and doesn't round
 float() applied to integers is boring
@@ -41,7 +41,6 @@ If one operand is a decimal (float), the answer is decimal
 If both operands are ints, the answer is an int (rounded down)
 
 <code>print 1 / 3, 5 / 2, -7 / 3</code>
-
 
 expressions - number or a binary operator applied to two expressions
 minus is also a unary operator and can be applied to a single expression
