@@ -2,6 +2,9 @@
 This is a document to check everything I learn about Python.
 Concepts will be in inverse order of appearance (first concepts I see first go last and vice versa).
 
+## Folders:
+-In <code>introduction/</code> you will find different basic programs as to grasp the fundamentals of the language
+
 ## 4) Variables
 
 There is no variable declaration in Python.
