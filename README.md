@@ -12,10 +12,10 @@ print type(3.0)
 we can convert between data types using int() and float()
 note that int() takes the "whole" part of a decimal number and doesn't round
 float() applied to integers is boring
-
+<pre>
 <code>print int(3.14159), int(-2.8)</code>
 <code>print float(3), float(-1)</code>
-
+</pre>
 
 floating point number have around 15 decimal digits of accuracy
 pi is 3.1415926535897932384626433832795028841971...
@@ -23,11 +23,13 @@ square root of two is 1.4142135623730950488016887242096980785696...
 
 
 #### arithmetic operators
+<pre>
 +		plus		addition
 -		minus		subtraction
 *		times		multiplication
 /		divided by 	division
 **    power		exponentiation
+</pre>
 
 <code>print 1 + 2, 3 - 4, 5 * 6, 2 ** 5</code>
 
@@ -49,16 +51,16 @@ minus is also a unary operator and can be applied to a single expression
 expressions are entered as sequence of numbers and operations
 how are the number and operators grouped to form expressions?
 operator precedence - "please excuse my dear aunt sallie" = (), **, *, /, +,-
-
-<code>print 1 * 2 + 3 * 4
-print 2 + 12</code>
-
+<pre>
+<code>print 1 * 2 + 3 * 4</code>
+<code>print 2 + 12</code>
+</pre>
 
 always manually group using parentheses when in doubt
-
-<code>print 1 * (2 + 3) * 4
-print 1 * 5 * 4</code>
-
+<pre>
+<code>print 1 * (2 + 3) * 4</code>
+<code>print 1 * 5 * 4</code>
+</pre>
 
 ## 2) print
 To print something to the console
