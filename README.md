@@ -5,6 +5,39 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 ## Folders:
 -In <code>introduction/</code> you will find different basic programs as to grasp the fundamentals of the language
 
+## 5) Functions
+
+They need <code>def</code> to define the function, assign some parameters if necessary inside <code>()</code> and end that part of the function, called header, with a <code>:</code>. The rest will be the body and it need indentation to be part of the function body. If it does not have a <code>return</code> statement and it is assigned to a variable, it will return <code>none</code>.
+
+converts fahrenheit to celsius
+<pre>
+<code>def fahrenheit2celsius(fahrenheit):
+    celsius = (5.0 / 9) * (fahrenheit - 32)
+    return celsius</code>
+</pre>
+
+test!!!
+<pre>
+<code>c1 = fahrenheit2celsius(32)
+c2 = fahrenheit2celsius(212)
+print c1, c2</code>
+</pre>
+
+converts fahrenheit to kelvin
+<pre>
+<code>def fahrenheit2kelvin(fahrenheit):
+    celsius = fahrenheit2celsius(fahrenheit)
+    kelvin = celsius + 273.15
+    return kelvin</code>
+</pre>
+
+test!!!
+<pre>
+<code>k1 = fahrenheit2kelvin(32)
+k2 = fahrenheit2kelvin(212)
+print k1, k2</code>
+</pre>
+
 ## 4) Variables
 
 There is no variable declaration in Python.
