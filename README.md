@@ -5,6 +5,51 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 ## Folders:
 -In <code>introduction/</code> you will find different basic programs as to grasp the fundamentals of the language
 
+## 6) Modular Arithmetic
+
+Long division - divide by a number, we get a quotient plus a remainder quotient is integer division //, the remainder is % (Docs)
+
+Problem - get the ones digit of a number
+<pre>
+<code>num = 49
+tens = num // 10
+ones = num % 10
+print tens, ones
+print 10 * tens + ones, num</code>
+</pre>
+
+Application - 24 hour clock
+<pre>
+<code>hour = 20
+shift = 8
+print (hour + shift) % 24</code>
+</pre>
+
+
+Application - screen wraparound
+Spaceship from week seven
+<pre>
+<code>width = 800
+position = 797
+move = 5
+position = (position + move) % width
+print position</code>
+</pre>
+
+
+Data conversion operations
+
+Convert an integer into string - str
+Convert an hour into 24-hour format "03:00", always print leading zero
+<pre>
+<code>hour = 3
+ones = hour % 10
+tens = hour // 10
+print tens, ones, ":00"
+print str(tens), str(ones), ":00"
+print str(tens) + str(ones) + ":00"</code>
+</pre>
+
 ## 5) Functions
 
 They need <code>def</code> to define the function, assign some parameters if necessary inside <code>()</code> and end that part of the function, called header, with a <code>:</code>. The rest will be the body and it need indentation to be part of the function body. If it does not have a <code>return</code> statement and it is assigned to a variable, it will return <code>none</code>.
