@@ -7,7 +7,7 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 
 ## 6) Modular Arithmetic
 
-Long division - divide by a number, we get a quotient plus a remainder quotient is integer division //, the remainder is % (Docs)
+Long division - divide by a number, we get a quotient plus a remainder quotient is integer division <code>//</code>, the remainder is <code>%</code> (Docs)
 
 Problem - get the ones digit of a number
 <pre>
@@ -39,7 +39,7 @@ print position</code>
 
 Data conversion operations
 
-Convert an integer into string - str
+Convert an integer into string - <code>str</code>
 Convert an hour into 24-hour format "03:00", always print leading zero
 <pre>
 <code>hour = 3
@@ -54,21 +54,21 @@ print str(tens) + str(ones) + ":00"</code>
 
 They need <code>def</code> to define the function, assign some parameters if necessary inside <code>()</code> and end that part of the function, called header, with a <code>:</code>. The rest will be the body and it need indentation to be part of the function body. If it does not have a <code>return</code> statement and it is assigned to a variable, it will return <code>none</code>.
 
-converts fahrenheit to celsius
+Converts fahrenheit to celsius
 <pre>
 <code>def fahrenheit2celsius(fahrenheit):
     celsius = (5.0 / 9) * (fahrenheit - 32)
     return celsius</code>
 </pre>
 
-test!!!
+Test:
 <pre>
 <code>c1 = fahrenheit2celsius(32)
 c2 = fahrenheit2celsius(212)
 print c1, c2</code>
 </pre>
 
-converts fahrenheit to kelvin
+Converts fahrenheit to kelvin
 <pre>
 <code>def fahrenheit2kelvin(fahrenheit):
     celsius = fahrenheit2celsius(fahrenheit)
@@ -76,7 +76,7 @@ converts fahrenheit to kelvin
     return kelvin</code>
 </pre>
 
-test!!!
+Test:
 <pre>
 <code>k1 = fahrenheit2kelvin(32)
 k2 = fahrenheit2kelvin(212)
