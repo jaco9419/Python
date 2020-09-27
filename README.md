@@ -5,6 +5,15 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 ## Folders:
 -In <code>introduction/</code> you will find different basic programs as to grasp the fundamentals of the language
 
+## 7) import math
+
+<pre>
+<code>import math
+
+def circle_circumference(radius):
+    return 2 * math.pi * radius</code>
+</pre>
+
 ## 6) Modular Arithmetic
 
 Long division - divide by a number, we get a quotient plus a remainder quotient is integer division <code>//</code>, the remainder is <code>%</code> (Docs)
