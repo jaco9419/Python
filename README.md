@@ -18,17 +18,17 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 <pre>
 <code># SimpleGUI program template
 
-# Import the module
+#Import the module
 import simplegui
 
-# Define global variables (program state)
+#Define global variables (program state)
 counter = 0
 
-# Define "helper" functions
+#Define "helper" functions
 def increment():
     global counter
     counter += 1
-# Define event handler functions
+#Define event handler functions
 def tick():
     increment()
     print counter
@@ -38,14 +38,14 @@ def buttonpress():
     counter = 0
     print counter
     
-# Create a frame
+#Create a frame
 frame = simplegui.create_frame("SimpleGUI Test", 200, 200)
 
-# Register event handlers
+#Register event handlers
 timer = simplegui.create_timer(1000, tick)
 frame.add_button("Click Me!", buttonpress)
 
-# Start frame and timers
+#Start frame and timers
 frame.start()
 timer.start()</code>
 </pre>
