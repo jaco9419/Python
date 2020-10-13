@@ -5,6 +5,16 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 ## Folders:
 -In <code>introduction/</code> you will find different basic programs as to grasp the fundamentals of the language
 
+## 10) Program Structure (SimpleGUI)
+
+-Globals (state)
+-Helpers
+-Classes
+-Define event handlers
+-Create a frame
+-Register event handlers
+-Start frame and timers
+
 ## 9) Event Driven Programming
 
 CodeSkulptor GUI module
