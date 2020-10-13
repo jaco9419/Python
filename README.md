@@ -15,10 +15,10 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 -Register event handlers
 -Start frame and timers
 
-# SimpleGUI program template
-
 <pre>
-<code># Import the module
+<code># SimpleGUI program template
+
+# Import the module
 import simplegui
 
 # Define global variables (program state)
