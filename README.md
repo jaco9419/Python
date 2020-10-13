@@ -23,19 +23,19 @@ Import the module
 <code>import simplegui</code>
 </pre>
 
-Define global variables (program state)
+1- Define global variables (program state)
 <pre>
 <code>counter = 0</code>
 </pre>
 
-Define "helper" functions
+2- Define "helper" functions
 <pre>
 <code>def increment():
     global counter
     counter += 1</code>
 </pre>
     
-Define event handler functions
+3- Define event handler functions
 <pre>
 <code>def tick():
     increment()
@@ -47,18 +47,18 @@ def buttonpress():
     print counter</code>
 </pre>
     
-Create a frame
+4- Create a frame
 <pre>
 <code>frame = simplegui.create_frame("SimpleGUI Test", 200, 200)</code>
 </pre>
 
-Register event handlers
+5- Register event handlers
 <pre>
 <code>timer = simplegui.create_timer(1000, tick)
 frame.add_button("Click Me!", buttonpress)</code>
 </pre>
 
-Start frame and timers
+6- Start frame and timers
 <pre>
 <code>frame.start()
 timer.start()</code>
