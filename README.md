@@ -15,6 +15,41 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 -Register event handlers
 -Start frame and timers
 
+# SimpleGUI program template
+
+<pre>
+<code># Import the module
+import simplegui
+
+# Define global variables (program state)
+counter = 0
+
+# Define "helper" functions
+def increment():
+    global counter
+    counter += 1
+# Define event handler functions
+def tick():
+    increment()
+    print counter
+    
+def buttonpress():
+    global counter
+    counter = 0
+    print counter
+    
+# Create a frame
+frame = simplegui.create_frame("SimpleGUI Test", 200, 200)
+
+# Register event handlers
+timer = simplegui.create_timer(1000, tick)
+frame.add_button("Click Me!", buttonpress)
+
+# Start frame and timers
+frame.start()
+timer.start()</code>
+</pre>
+
 ## 9) Event Driven Programming
 
 CodeSkulptor GUI module
