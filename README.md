@@ -8,14 +8,16 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 ## 9) Event Driven Programming
 
 CodeSkulptor GUI module
-import simplegui
+<code>import simplegui</code>
 
-def tick():
+<pre>
+<code>def tick():
     print "tick!"
     
 timer = simplegui.create_timer(1000, tick)
 
-timer.start()
+timer.start()</code>
+</pre>
 
 ## 8) Conditionals
 
