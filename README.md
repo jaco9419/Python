@@ -15,38 +15,52 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
     <li>Register event handlers</li>
     <li>Start frame and timers</li>
 </ol>
+
+SimpleGUI program template
+
+Import the module
 <pre>
-<code># SimpleGUI program template
+<code>import simplegui</code>
+</pre>
 
-#Import the module
-import simplegui
+Define global variables (program state)
+<pre>
+<code>counter = 0</code>
+</pre>
 
-#Define global variables (program state)
-counter = 0
-
-#Define "helper" functions
-def increment():
+Define "helper" functions
+<pre>
+<code>def increment():
     global counter
-    counter += 1
-#Define event handler functions
-def tick():
+    counter += 1</code>
+</pre>
+    
+Define event handler functions
+<pre>
+<code>def tick():
     increment()
     print counter
     
 def buttonpress():
     global counter
     counter = 0
-    print counter
+    print counter</code>
+</pre>
     
-#Create a frame
-frame = simplegui.create_frame("SimpleGUI Test", 200, 200)
+Create a frame
+<pre>
+<code>frame = simplegui.create_frame("SimpleGUI Test", 200, 200)</code>
+</pre>
 
-#Register event handlers
-timer = simplegui.create_timer(1000, tick)
-frame.add_button("Click Me!", buttonpress)
+Register event handlers
+<pre>
+<code>timer = simplegui.create_timer(1000, tick)
+frame.add_button("Click Me!", buttonpress)</code>
+</pre>
 
-#Start frame and timers
-frame.start()
+Start frame and timers
+<pre>
+<code>frame.start()
 timer.start()</code>
 </pre>
 
