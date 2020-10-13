@@ -6,15 +6,15 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 -In <code>introduction/</code> you will find different basic programs as to grasp the fundamentals of the language
 
 ## 10) Program Structure (SimpleGUI)
-
--Globals (state)
--Helpers
--Classes
--Define event handlers
--Create a frame
--Register event handlers
--Start frame and timers
-
+<ol>
+    <li>Globals (state)</li>
+    <li>Helpers</li>
+    <li>Classes</li>
+    <li>Define event handlers</li>
+    <li>Create a frame</li>
+    <li>Register event handlers</li>
+    <li>Start frame and timers</li>
+</ol>
 <pre>
 <code># SimpleGUI program template
 
