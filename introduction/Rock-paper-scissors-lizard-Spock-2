@@ -1,0 +1,88 @@
+# GUI-based version of RPSLS
+
+###################################################
+# Student should add code where relevant to the following.
+
+import simplegui
+import random
+
+# Functions that compute RPSLS
+def name_to_number(name):
+    if name == 'rock':
+        return 0
+    elif name == 'Spock':
+        return 1
+    elif name == 'paper':
+        return 2
+    elif name == 'lizard':
+        return 3
+    elif name == 'scissors':
+        return 4
+    else:
+        print 'Your input must be: "rock", "paper", "scissors", "lizard" or "Spock"'
+
+    # convert name to number using if/elif/else
+    # don't forget to return the result!
+
+
+def number_to_name(number):
+    if number == 0:
+        return 'rock'
+    elif number == 1:
+        return 'Spock'
+    elif number == 2:
+        return 'paper'
+    elif number == 3:
+        return 'lizard'
+    elif number == 4:
+        return 'scissors'
+    else:
+        print 'Your input must be a number between 0 and 4'
+    
+    # convert number to a name using if/elif/else
+    # don't forget to return the result!
+    
+    
+def rpsls(player_choice): 
+    print 
+    print 'Player chooses', player_choice
+    player_number = name_to_number(player_choice)
+    comp_number = random.randrange(0, 5)
+    comp_choice = number_to_name(comp_number)
+    print 'Computer chooses', comp_choice
+    difference_number = (player_number - comp_number) % 5
+    if difference_number == 0:
+        print 'Player and computer tie!'
+    elif difference_number == 1 or difference_number == 2:
+        print 'Player wins!'
+    else:
+        print 'Computer wins!'
+     
+    
+# Handler for buttons
+def select_rock():
+    rpsls("rock")
+
+def select_spock():
+    rpsls("Spock")
+    
+def select_paper():
+    rpsls("paper")
+    
+def select_lizard():
+    rpsls("lizard")   
+    
+def select_scissors():
+    rpsls("scissors")
+
+
+# Create frame and assign callbacks to event handlers
+frame = simplegui.create_frame("GUI-based RPSLS", 200, 200)
+frame.add_button("rock", select_rock, 100)
+frame.add_button("Spock", select_spock, 100)
+frame.add_button("paper", select_paper, 100)
+frame.add_button("lizard", select_lizard, 100)
+frame.add_button("scissors", select_scissors, 100)
+
+# Start the frame animation
+frame.start()
