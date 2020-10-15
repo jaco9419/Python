@@ -5,6 +5,16 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 ## Folders:
 -In <code>introduction/</code> you will find different basic programs as to grasp the fundamentals of the language
 
+## 14) String Manipulation
+
+Characters and slices
+<pre>
+<code>print s1[3]
+print len(s1)
+print s1[0:6] + s2[6:]
+print s2[:13] + s1[9:] + s3</code>
+</pre>
+
 ## 13) Canvas Drawing - SimpleGUI
 
 <pre>
