@@ -1,6 +1,6 @@
 # Simple Game to guess a random number under a determined number of limited tries
 # To play, you can copy paste the following CodeSkulpture link and hit the run button on the top left:
-# http://www.codeskulptor.org/#user47_fxtKwN1qgY_0.py
+# http://www.codeskulptor.org/#user47_fxtKwN1qgY_1.py
 
 import simplegui
 import random
@@ -55,7 +55,7 @@ def input_guess(guess):
     
     # Stops game is allowed guesses are over
     if allowed_guesses == 0:
-        print "Game Over, try again"
+        print "Game Over, the number was:", secret_number
         new_game()
 
     
