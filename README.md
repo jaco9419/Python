@@ -5,6 +5,34 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 ## Folders:
 -In <code>introduction/</code> you will find different basic programs as to grasp the fundamentals of the language
 
+## 13) Canvas Drawing - SimpleGUI
+
+<pre>
+<code>import simplegui</code>
+</pre>
+
+define draw handler
+<pre>
+<code>def draw(canvas):
+    canvas.draw_text("Hello!",[100, 100], 24, "White")
+    canvas.draw_circle([100, 100], 2, 2, "Red")</code>
+</pre>
+
+create frame
+<pre>
+<code>frame = simplegui.create_frame("Text drawing", 300, 200)</code>
+</pre>
+
+register draw handler    
+<pre>
+<code>frame.set_draw_handler(draw)</code>
+</pre>
+
+start frame
+<pre>
+<code>frame.start()</code>
+</pre>
+
 ## 12) Docs
 
 http://www.codeskulptor.org/docs.html#tabs-Python
