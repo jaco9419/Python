@@ -1,0 +1,71 @@
+# Simple Game to guess a random number under a determined number of limited tries
+# To play, you can copy paste the following CodeSkulpture link and hit the run button on the top left:
+# http://www.codeskulptor.org/#user47_fxtKwN1qgY_0.py
+
+import simplegui
+import random
+
+is1000 = False
+
+# helper function to start and restart the game
+def new_game():
+    # initialize global variables used in your code here
+    global secret_number, allowed_guesses
+    print ""
+    if is1000 == False:
+        secret_number = random.randrange(0, 100)
+        allowed_guesses = 7
+        print "Your new number is between 0 and 99"
+        print "Allowed guesses left", allowed_guesses
+    else:
+        secret_number = random.randrange(0, 1000)
+        allowed_guesses = 10
+        print "Your new number is between 0 and 999"
+        print "Allowed guesses left", allowed_guesses
+
+
+# define event handlers for control panel
+def range100():
+    # button that changes the range to [0,100) and starts a new game 
+    global is1000
+    is1000 = False
+    new_game()
+
+def range1000():
+    # button that changes the range to [0,1000) and starts a new game     
+    global is1000
+    is1000 = True
+    new_game()    
+    
+def input_guess(guess):
+    # main game logic goes here
+    global allowed_guesses
+    allowed_guesses -= 1
+    print ""
+    print "Guess was", int(guess)
+    if int(guess) < secret_number:
+        print "Higher"
+    elif int(guess) > secret_number:
+        print "Lower"
+    else:
+        print "Correct you win!"
+        new_game()
+        return
+    print "Allowed guesses left", allowed_guesses
+    
+    # Stops game is allowed guesses are over
+    if allowed_guesses == 0:
+        print "Game Over, try again"
+        new_game()
+
+    
+# create frame
+frame = simplegui.create_frame("Guess the Number", 300, 300)
+
+# register event handlers for control elements and start frame
+frame.add_input("Enter a number:", input_guess, 195)
+frame.add_button("Range is [0,100)", range100, 200)
+frame.add_button("Range is [0,1000)", range1000, 200)
+
+# call new_game 
+new_game()
