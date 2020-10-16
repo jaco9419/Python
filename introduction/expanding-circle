@@ -1,0 +1,49 @@
+# Check out the code in CodeSkulptor by copying: http://www.codeskulptor.org/iipp-practice-experimental/#user47_I8fgAa2uLQ_0.py
+
+# Expanding circle by timer
+
+###################################################
+# Student should add code where relevant to the following.
+
+import simplegui 
+import random
+
+WIDTH = 400
+HEIGHT = 400
+radius = 1
+isIncreasing = True
+color1 = '#BAD847'
+color2 = '#D88947'
+
+
+# Timer handler
+def tick():
+    global radius, isIncreasing, color1, color2
+    if radius < WIDTH / 2 and isIncreasing:
+        radius += 1
+    else:
+        radius -= 1
+    
+    if radius == WIDTH / 2:
+        isIncreasing = False
+    elif radius == 1:
+        isIncreasing = True
+        
+#    color1 = "rgba("+str(random.randrange(0, 256))+","+str(random.randrange(0, 256))+","+str(random.randrange(0, 256))+")"
+#    color2 = "rgba("+str(random.randrange(0, 256))+","+str(random.randrange(0, 256))+","+str(random.randrange(0, 256))+")"
+#    
+#    frame.set_canvas_background(color2)
+    
+# Draw handler
+def draw_handler(canvas):
+    canvas.draw_circle((WIDTH / 2, HEIGHT / 2), radius, 3, color1)
+        
+# Create frame and timer
+frame = simplegui.create_frame('Testing', WIDTH, HEIGHT)
+frame.set_canvas_background(color2)
+frame.set_draw_handler(draw_handler)
+timer = simplegui.create_timer(25, tick)
+
+# Start timer
+frame.start()
+timer.start()
