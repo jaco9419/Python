@@ -1,0 +1,31 @@
+# Mystery computation in Python
+# Takes input n and computes output named result
+
+import simplegui
+
+# global state
+
+number = 217
+
+# helper functions
+def update():
+    global number
+    print number
+    if number % 2 == 0:
+        number = number / 2
+    elif number == 1:
+        timer.stop()
+    else:
+        number = number * 3 + 1
+    
+# timer callback
+
+def tick():
+    update()
+
+# register event handlers
+
+timer = simplegui.create_timer(100, tick)
+
+# start program
+timer.start()
