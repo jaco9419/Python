@@ -1,0 +1,77 @@
+# If you want to see this game in CodeSkulptor, you can copy and paste the following URL: http://www.codeskulptor.org/#user47_SRReBZFFEb_2.py
+
+# define global variables
+import simplegui
+current_time = 0
+next_time = 0
+successful_tries = 0
+total_tries = 0
+is_running = False
+message = "Can you stop the watch on a whole number?"
+
+# define helper function format that converts time
+# in tenths of seconds into formatted string A:BC.D
+def format(num):
+    
+    A = num // 1000
+    B = num // 100 - num // 1000 * 10
+    C = num // 10 - num // 100 * 10
+    D = num - num // 10 * 10
+    
+    AB = int(str(A) + str(B))
+    
+    if AB > 5:
+        A = AB / 6
+        B = AB % 6
+        
+    return str(A) + ":" + str(B) + str(C) + "." + str(D)
+    
+# define event handlers for buttons; "Start", "Stop", "Reset"
+def start():
+    global is_running
+    is_running = True
+    timer.start()
+    
+def stop():
+    global total_tries, successful_tries, is_running
+    timer.stop()
+    
+    if is_running:
+        total_tries += 1
+        is_running = False
+        if current_time % 10 == 0:
+            successful_tries += 1
+    
+def reset():
+    global current_time, total_tries, successful_tries, is_running
+    current_time = 0
+    total_tries = 0
+    successful_tries = 0
+    is_running = False
+    timer.stop()
+
+# define event handler for timer with 0.1 sec interval
+def timer_handler():
+    global current_time
+    current_time += 1
+
+# define draw handler
+def draw_handler(canvas):
+    canvas.draw_text(format(current_time), (125, 200), 50, '#474979', 'monospace')
+    canvas.draw_text(str(successful_tries) + "/" + str(total_tries), (320, 55), 30, '#343434', 'monospace')
+    canvas.draw_text(message, (17, 290), 16, '#343434', 'monospace')
+    
+# create frame
+frame = simplegui.create_frame('Stopwatch', 400, 400)
+frame.set_canvas_background('#D88947')
+
+# register event handlers
+timer = simplegui.create_timer(100, timer_handler)
+frame.set_draw_handler(draw_handler)
+start = frame.add_button('Start', start, 75)
+stop = frame.add_button('Stop', stop, 75)
+reset = frame.add_button('Reset', reset, 75)
+
+# start frame
+frame.start()
+# Please remember to review the grading rubric
