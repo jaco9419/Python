@@ -5,6 +5,32 @@ Concepts will be in inverse order of appearance (first concepts I see first go l
 ## Folders:
 -In <code>introduction/</code> you will find different basic programs as to grasp the fundamentals of the language
 
+## 15) Lists vs Tuples
+
+<type 'list'>
+<pre>
+<code>print type([4, 5, 6])</code>
+</pre>
+
+<type 'tuple'>
+<pre>
+<code>print type((4, 5, 6))</code>
+</pre>
+
+Lists are mutable:
+<pre>
+<code>a = [4, 5, 6]
+a[1] = 100
+print a</code>
+</pre>
+
+Tuples are unmutable (prints TypeError): 
+<pre>
+<code>b = (4, 5, 6)
+b[1] = 100
+print b</code>
+</pre>
+
 ## 14) String Manipulation
 
 Characters and slices
