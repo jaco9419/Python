@@ -1,4 +1,6 @@
 # Implementation of classic arcade game Pong
+# You can play it by copying and pasting the following URL: http://www.codeskulptor.org/#user47_JfF6xWDAsDKN6BO.py
+# It uses simplegui to render the code into the Browser through Javascript
 
 import simplegui
 import random
